@@ -3,8 +3,8 @@
 
 int	main(void)
 {
-	int	n = 2;
+	char	c = 'A';
 
-	ft_printf("Caso 1# Int: %d", n);
+	ft_printf("Caso 1# Char: %c", c);
 	return (0);
 }

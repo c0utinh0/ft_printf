@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 14:25:30 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/20 16:08:32 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/21 14:01:20 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 
 
 int	ft_printf(const char *s, ...);
-void	ft_choise_param(char	*s, va_list params);
+void	ft_choise_param(char	c, va_list params);
+void	ft_print_char(int c);
 
 
 #endif
