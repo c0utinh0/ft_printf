@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_choise_param.c                                  :+:      :+:    :+:   */
+/*   ft_dec_to_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/20 16:12:33 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/22 16:19:46 by dcoutinh         ###   ########.fr       */
+/*   Created: 2022/06/22 18:00:50 by dcoutinh          #+#    #+#             */
+/*   Updated: 2022/06/22 19:18:25 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include <stdio.h>
+#include <unistd.h>
 
-int	ft_choise_param(char c, va_list params)
+int ft_dec_to_hex(int n)
 {
-	int	len;
+	int div;
+	int rest;
+	char c;
 
-	len = 0;
-	if (c == 'c')
-		len = ft_print_char(va_arg(params, int));
-	if (c == 's')
-		len = ft_print_str(va_arg(params, char *));
-	if (c == 'p')
-		len = ft_print_p(va_arg(params, unsigned int));
-	return (len);
+	div = 16;
+	while (n > div)
+	{
+		  rest = (n % div);
+		  n = n / div;
+		  if (rest <= 9)
+		  {
+			  c = rest + '0'; 
+			  write(1, &c, 1);
+		  }
+	}
+	c = n + '0';
+	write(1, &c, 1);
+
+	return (1);
 }
+

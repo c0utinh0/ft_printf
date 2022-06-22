@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_choise_param.c                                  :+:      :+:    :+:   */
+/*   ft_pf_strlen.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/20 16:12:33 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/22 16:19:46 by dcoutinh         ###   ########.fr       */
+/*   Created: 2022/06/22 12:14:44 by dcoutinh          #+#    #+#             */
+/*   Updated: 2022/06/22 12:28:31 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_choise_param(char c, va_list params)
+size_t	ft_pf_strlen(const char *s)
 {
-	int	len;
+	size_t	i;
 
-	len = 0;
-	if (c == 'c')
-		len = ft_print_char(va_arg(params, int));
-	if (c == 's')
-		len = ft_print_str(va_arg(params, char *));
-	if (c == 'p')
-		len = ft_print_p(va_arg(params, unsigned int));
-	return (len);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
