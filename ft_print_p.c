@@ -6,17 +6,13 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 16:20:22 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/22 16:28:00 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/23 15:23:00 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_p(unsigned int p)
+int	ft_print_p(unsigned long p)
 {
-	unsigned int *x;
-
-	x = p;
-	return (0);
+	return (ft_print_str(ft_dec_to_hex(p, 'a')));
 }
-

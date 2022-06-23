@@ -14,10 +14,10 @@ int	main(void)
 //	int len_ft_str = ft_printf("FT# %s%s\n", s2, "pingas");
 //	printf("Original: %d, FT:  %d\n\n", len_o_str, len_ft_str); 
 
-	char *p1 = "pingas";
-	char *p2 = "pingas";
-	int len_o_p = printf("Or# %p\n", p1);
-	int len_ft_p = ft_printf("FT# %p\n", p2);
+	char *p1;
+	char *p2;
+	int len_o_p = printf("Or# %p\n", &p1);
+	int len_ft_p = ft_printf("FT# %p\n",&p2);
 	printf("Original: %d, FT:  %d\n\n", len_o_p, len_ft_p); 
 
 	return (0);

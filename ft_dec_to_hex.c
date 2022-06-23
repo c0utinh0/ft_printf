@@ -6,17 +6,13 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 18:00:50 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/23 11:52:56 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/23 15:20:01 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
+#include "ft_printf.h"
 
-int	ft_hexlen(unsigned long n);
-
-int	ft_print_r(int rest, char op, char *s, int i)
+int	ft_calc_r(int rest, char op, char *s, int i)
 {
 	char	c;
 
@@ -33,7 +29,7 @@ int	ft_print_r(int rest, char op, char *s, int i)
 	return (i);
 }
 
-int	ft_print_n(int n, char op, char *s, int i)
+int	ft_calc_n(int n, char op, char *s, int i)
 {
 	char c;
 
@@ -50,7 +46,7 @@ int	ft_print_n(int n, char op, char *s, int i)
 	return (i);
 }
 
-int	ft_dec_to_hex(unsigned long n, char op)
+char	*ft_dec_to_hex(unsigned long n, char op)
 {
 	int		div;
 	int		rest;
@@ -67,8 +63,8 @@ int	ft_dec_to_hex(unsigned long n, char op)
 	{
 		rest = (n % div);
 		n = n / div;
-		ft_print_r(rest, op, s, i);
+		ft_calc_r(rest, op, s, i);
 	}
-	ft_print_n(n, op, s, i);
-		return (1);
+	ft_calc_n(n, op, s, i);
+		return (s);
 }
