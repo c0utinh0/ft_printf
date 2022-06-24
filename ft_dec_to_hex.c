@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_calc_r(int rest, char op, char *s, int i)
+static int	ft_calc_r(int rest, char op, char *s, int i)
 {
 	char	c;
 
@@ -29,7 +29,7 @@ int	ft_calc_r(int rest, char op, char *s, int i)
 	return (i);
 }
 
-int	ft_calc_n(int n, char op, char *s, int i)
+static int	ft_calc_n(int n, char op, char *s, int i)
 {
 	char c;
 

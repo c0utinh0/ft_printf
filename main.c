@@ -1,5 +1,6 @@
 #include "ft_printf.h"
 #include <stdio.h>
+#include <limits.h>
 
 int	main(void)
 {
@@ -14,11 +15,15 @@ int	main(void)
 //	int len_ft_str = ft_printf("FT# %s%s\n", s2, "pingas");
 //	printf("Original: %d, FT:  %d\n\n", len_o_str, len_ft_str); 
 
-	char *p1;
-	char *p2;
-	int len_o_p = printf("Or# %p\n", &p1);
-	int len_ft_p = ft_printf("FT# %p\n",&p2);
-	printf("Original: %d, FT:  %d\n\n", len_o_p, len_ft_p); 
-
+//	char *p1;
+//	char *p2;
+//	int len_o_p = printf("Or# %p\n", &p1);
+//	int len_ft_p = ft_printf("FT# %p\n",&p2);
+//	printf("Original: %d, FT: %d\n\n", len_o_p, len_ft_p); 
+	
+	int len_o_d = printf("Or# %d\n", 42);
+	int len_ft_d = ft_printf("FT# %d\n",42);
+	printf("Original: %d, FT: %d\n\n", len_o_d, len_ft_d); 
+	
 	return (0);
 }
