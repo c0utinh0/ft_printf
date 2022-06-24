@@ -14,5 +14,13 @@
 
 int	ft_print_p(unsigned long p)
 {
-	return (ft_print_str(ft_dec_to_hex(p, 'a')));
+	char	*str;
+	int	len;
+
+	str = ft_dec_to_hex(p, str, 'a');
+	str[0] = '0';
+	str[1] = 'x';
+	len = ft_print_str(str);
+	free(str);
+	return (len);
 }

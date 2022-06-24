@@ -24,6 +24,6 @@ int		ft_print_str(char *s);
 size_t	ft_pf_strlen(const char *s);
 int		ft_print_p(unsigned long p);
 int		ft_hexlen(unsigned long n);
-char	*ft_dec_to_hex(unsigned long n, char op);
+char	*ft_dec_to_hex(unsigned long n, char *s, char op);
 
 #endif

@@ -46,25 +46,23 @@ int	ft_calc_n(int n, char op, char *s, int i)
 	return (i);
 }
 
-char	*ft_dec_to_hex(unsigned long n, char op)
+char	*ft_dec_to_hex(unsigned long n, char *s, char op)
 {
 	int		div;
 	int		rest;
-	char *s;
 	int i;
 
-	i = ft_hexlen(n);
-	s = malloc(i * sizeof(char));
+	i = ft_hexlen(n) + 1;
+	s = (char *) calloc(i, sizeof(char));
 	if (!s)
 		return (0);
 	div = 16;
-	i = 0;
 	while (n > div)
 	{
 		rest = (n % div);
 		n = n / div;
-		ft_calc_r(rest, op, s, i);
+		i = ft_calc_r(rest, op, s, i);
 	}
 	ft_calc_n(n, op, s, i);
-		return (s);
+	return (s);
 }
