@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dec_to_hex.c                                    :+:      :+:    :+:   */
+/*   ft_dec_to_hex_p.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 18:00:50 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/27 14:59:41 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/27 17:12:23 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static int	ft_calc_n(int n, char op, char *s, int i)
 	return (i);
 }
 
-char	*ft_dec_to_hex(unsigned long n, char *s, char op)
+char	*ft_dec_to_hex_p(unsigned long n, char *s, char op)
 {
 	int		div;
 	int		rest;

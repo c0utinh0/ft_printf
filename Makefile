@@ -6,7 +6,7 @@
 #    By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/25 11:17:28 by dcoutinh          #+#    #+#              #
-#    Updated: 2022/06/27 16:41:21 by dcoutinh         ###   ########.fr        #
+#    Updated: 2022/06/27 17:13:23 by dcoutinh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ NAME = libftprintf.a
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS =  ft_choise_param.c	\
-		ft_dec_to_hex.c	\
+		ft_dec_to_hex_p.c	\
+		ft_dec_to_hex_x.c	\
 		ft_hexlen.c	\
 		ft_pf_itoa_i.c	\
 		ft_pf_itoa_u.c	\
@@ -29,7 +30,9 @@ SRCS =  ft_choise_param.c	\
 		ft_print_str.c	\
 		ft_printf.c	\
 		ft_print_u.c	\
-
+		ft_print_x.c	\
+		ft_print_xx.c	\
+		
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME) 

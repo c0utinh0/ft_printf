@@ -26,12 +26,15 @@ int	main(void)
 //	int len_ft_d = ft_printf("FT# %d\n", 1750);
 //	printf("Original: %d, FT: %d\n\n", len_o_d, len_ft_d); 
 
-	int len_o_u = printf("%u\n", -1750);
-	printf("Original: %d\n", len_o_u); 
-	int len_ft_u = ft_printf("%u\n", -1750);
-	printf("FT: %d\n", len_ft_u); 
+//	int len_o_u = printf("%u\n", -1750);
+//	printf("Original: %d\n", len_o_u); 
+//	int len_ft_u = ft_printf("%u\n", -1750);
+//	printf("FT: %d\n", len_ft_u); 
 
-
+	int len_o_x = printf(" %x ", -1);
+	printf("\nOriginal: %d\n", len_o_x); 
+	int len_ft_x = ft_printf(" %x ", -1);
+	printf("\nFT: %d\n", len_ft_x); 
 
 
 	return (0);

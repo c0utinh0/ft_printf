@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_p.c                                       :+:      :+:    :+:   */
+/*   ft_print_x.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/22 16:20:22 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/27 17:11:42 by dcoutinh         ###   ########.fr       */
+/*   Created: 2022/06/27 17:19:10 by dcoutinh          #+#    #+#             */
+/*   Updated: 2022/06/27 18:06:58 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_p(unsigned long p)
+int	ft_print_x(unsigned int p)
 {
 	char	*str;
 	int	len;
 
 	str = NULL;
-	str = ft_dec_to_hex_p(p, str, 'a');
-	if (*str == '(')
+	str = ft_dec_to_hex_x(p, str, 'x');
+	if (*str == '0')
 	{
 		len = ft_print_str(str);
 	}
 	else
 	{
-		str[0] = '0';
-		str[1] = 'x';
 		len = ft_print_str(str);
 		free(str);
 	}

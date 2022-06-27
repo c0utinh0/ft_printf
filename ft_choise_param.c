@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 16:12:33 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/27 16:23:32 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/27 17:05:14 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@ int	ft_choise_param(char c, va_list params)
 		len = ft_print_d(va_arg(params, int));
 	if (c == 'u')
 		len = ft_print_u(va_arg(params, unsigned int));
+	if (c == 'x')
+		len = ft_print_x(va_arg(params, unsigned int));
+	if (c == 'X')
+		len = ft_print_xx(va_arg(params, unsigned int));
 
 	return (len);
 }
