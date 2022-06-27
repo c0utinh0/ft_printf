@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 18:00:50 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/23 15:20:01 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/27 14:59:41 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,16 @@ char	*ft_dec_to_hex(unsigned long n, char *s, char op)
 	int		rest;
 	int i;
 
-	i = ft_hexlen(n) + 1;
-	s = (char *) calloc(i, sizeof(char));
+	i = ft_hexlen(n);
+	if (!i)
+		return ("(nil)");
+	s = (char *) calloc(++i, sizeof(char));
 	if (!s)
 		return (0);
 	div = 16;
-	while (n > div)
+	while (n >= (unsigned long) div)
 	{
-		rest = (n % div);
+		rest = (n % (unsigned long) div);
 		n = n / div;
 		i = ft_calc_r(rest, op, s, i);
 	}

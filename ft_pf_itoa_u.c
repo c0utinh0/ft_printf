@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pf_itoa.c                                       :+:      :+:    :+:   */
+/*   ft_pf_itoa_u.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/24 18:44:55 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/24 19:15:22 by dcoutinh         ###   ########.fr       */
+/*   Created: 2022/06/27 16:09:34 by dcoutinh          #+#    #+#             */
+/*   Updated: 2022/06/27 16:45:16 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,24 +43,10 @@ static void	*ft_calloc(size_t count, size_t size)
 	return (ptr);
 }
 
-static char	*ft_strdup(const char *s)
-{
-	char	*dst;
-	int		n;
-
-	n = ft_pf_strlen((char *)s) + 1;
-	dst = malloc(sizeof(char) * (n));
-	if (!dst)
-		return (NULL);
-	ft_pf_memcpy(dst, s, n);
-
-	return (dst);
-}
-
-static int	ft_count_n(int n)
+static int	ft_count_n(unsigned int n)
 {
 	int	t;
-
+		
 	t = 0;
 	if (n == 0)
 		return (1);
@@ -72,22 +58,13 @@ static int	ft_count_n(int n)
 	return (t);
 }
 
-char	*ft_pf_itoa(char *str, int n)
+char	*ft_pf_itoa_u(char *str, unsigned int n)
 {
 	int		i;
-	int		n_temp;
-
-	n_temp = n;
+	
+	i = 0;
 	i = ft_count_n(n);
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	if (n < 0)
-	{
-		n = n * (-1);
-		str = ft_calloc(++i + 1, 1);
-	}
-	else
-		str = ft_calloc(i + 1, 1);
+	str = ft_calloc(i + 1, 1);
 	if (!str)
 		return (NULL);
 	while (i > 0)
@@ -95,8 +72,5 @@ char	*ft_pf_itoa(char *str, int n)
 		str[--i] = (n % 10) + '0';
 		n = n / 10;
 	}
-	if (n_temp < 0)
-		str[0] = '-';
 	return (str);
 }
-

@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 16:05:26 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/24 19:07:06 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/27 16:05:42 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ int	ft_print_d(int n)
 {
 	char	*s;
 
-	s = ft_pf_itoa(s, n);
+	s = NULL;
+	s = ft_pf_itoa_i(s, n);
 	n = ft_print_str(s);
 	free(s);
 	return (n);

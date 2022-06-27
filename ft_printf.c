@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 14:21:42 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/22 15:58:07 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/27 12:05:12 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ int	ft_printf(const char *s, ...)
 
 	len = 0;
 	va_start(params, s);
-	while (*s)
+	while (*s != '\0')
 	{
 		if (*s == '%')
 		{
 			len += ft_choise_param(*++s, params);
 			s++;
 		}
-		if (*s != '%')
+		else if((*s != '%') && (*s != '\0'))
 		{
 			write(1, s++, 1);
 			len++;

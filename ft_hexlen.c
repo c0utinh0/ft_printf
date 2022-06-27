@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 11:01:21 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/23 11:12:04 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/27 14:15:34 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@ int	ft_hexlen(unsigned long n)
 {
 	int len;
 
+	len = 0;
 	if (n == 0)
-		return (1);
+		return (0);
 	while (n)
 	{
 		n /= 16;
