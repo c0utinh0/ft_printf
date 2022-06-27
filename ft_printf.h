@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 14:25:30 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/27 17:14:13 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/27 18:35:53 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,5 @@ char	*ft_pf_itoa_u(char *str, unsigned int n);
 int	ft_print_u(unsigned int n);
 int	ft_print_x(unsigned int n);
 int	ft_print_xx(unsigned int n);
+int	ft_print_percent(int c);
 #endif

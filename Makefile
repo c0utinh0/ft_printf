@@ -6,7 +6,7 @@
 #    By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/25 11:17:28 by dcoutinh          #+#    #+#              #
-#    Updated: 2022/06/27 17:13:23 by dcoutinh         ###   ########.fr        #
+#    Updated: 2022/06/27 18:37:27 by dcoutinh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRCS =  ft_choise_param.c	\
 		ft_print_u.c	\
 		ft_print_x.c	\
 		ft_print_xx.c	\
+		ft_print_percent.c	\
 		
 OBJS = $(SRCS:.c=.o)
 
