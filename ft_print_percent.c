@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 18:31:44 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/27 18:45:20 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/28 12:00:05 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,4 +17,3 @@ int	ft_print_percent(int c)
 	c = write(1, "%", 1);
 	return (c);
 }
-

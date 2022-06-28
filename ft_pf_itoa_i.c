@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:44:55 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/27 16:17:36 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/28 11:53:31 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ static char	*ft_strdup(const char *s)
 	if (!dst)
 		return (NULL);
 	ft_pf_memcpy(dst, s, n);
-
 	return (dst);
 }
 
@@ -74,7 +73,7 @@ static int	ft_count_n(int n)
 
 char	*ft_pf_itoa_i(char *str, int n)
 {
-	int		i;
+	int	i;
 	int	n_temp;
 
 	n_temp = n;
@@ -99,4 +98,3 @@ char	*ft_pf_itoa_i(char *str, int n)
 		str[0] = '-';
 	return (str);
 }
-

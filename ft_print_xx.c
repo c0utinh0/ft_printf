@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 17:20:58 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/27 18:01:13 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/28 14:35:51 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 int	ft_print_xx(unsigned int p)
 {
 	char	*str;
-	int	len;
+	int		len;
 
 	str = NULL;
 	str = ft_dec_to_hex_x(p, str, 'X');
-	if (*str == '(')
+	if (*str == '0')
 	{
 		len = ft_print_str(str);
 	}

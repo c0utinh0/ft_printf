@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 17:15:33 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/27 18:21:30 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/28 14:36:05 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ static int	ft_calc_r(int rest, char op, char *s, int i)
 
 	if (rest <= 9)
 	{
-		c = rest + '0'; 
+		c = rest + '0';
 		s[i--] = c;
 	}
 	else
 	{
-		c = ((rest/ 10) + (rest % 10) - 1) + op;
+		c = ((rest / 10) + (rest % 10) - 1) + op;
 		s[i--] = c;
 	}
 	return (i);
@@ -31,16 +31,16 @@ static int	ft_calc_r(int rest, char op, char *s, int i)
 
 static int	ft_calc_n(unsigned int n, char op, char *s, int i)
 {
-	char c;
+	char	c;
 
 	if (n <= 9)
 	{
 		c = n + '0';
 		s[i--] = c;
 	}
-	else 
-	{	
-		c = ((n/ 10) + (n % 10) - 1) + op;
+	else
+	{
+		c = ((n / 10) + (n % 10) - 1) + op;
 		s[i--] = c;
 	}
 	return (i);
@@ -50,7 +50,7 @@ char	*ft_dec_to_hex_x(unsigned int n, char *s, char op)
 {
 	int		div;
 	int		rest;
-	int i;
+	int		i;
 
 	i = ft_hexlen(n);
 	if (!i)

@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 16:09:34 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/27 16:45:16 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/28 11:54:46 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static void	*ft_calloc(size_t count, size_t size)
 static int	ft_count_n(unsigned int n)
 {
 	int	t;
-		
+
 	t = 0;
 	if (n == 0)
 		return (1);
@@ -60,8 +60,8 @@ static int	ft_count_n(unsigned int n)
 
 char	*ft_pf_itoa_u(char *str, unsigned int n)
 {
-	int		i;
-	
+	int	i;
+
 	i = 0;
 	i = ft_count_n(n);
 	str = ft_calloc(i + 1, 1);

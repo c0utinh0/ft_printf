@@ -6,13 +6,15 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 11:01:21 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/27 14:15:34 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/28 11:50:53 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
+
 int	ft_hexlen(unsigned long n)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (n == 0)

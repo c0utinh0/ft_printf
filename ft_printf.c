@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 14:21:42 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/27 12:05:12 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/28 13:30:18 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_printf(const char *s, ...)
 			len += ft_choise_param(*++s, params);
 			s++;
 		}
-		else if((*s != '%') && (*s != '\0'))
+		else if ((*s != '%') && (*s != '\0'))
 		{
 			write(1, s++, 1);
 			len++;

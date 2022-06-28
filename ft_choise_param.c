@@ -6,7 +6,7 @@
 /*   By: dcoutinh <dcoutinh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 16:12:33 by dcoutinh          #+#    #+#             */
-/*   Updated: 2022/06/27 18:41:44 by dcoutinh         ###   ########.fr       */
+/*   Updated: 2022/06/28 11:38:23 by dcoutinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,5 @@ int	ft_choise_param(char c, va_list params)
 		len = ft_print_xx(va_arg(params, unsigned int));
 	if (c == '%')
 		len = ft_print_percent(va_arg(params, int));
-
 	return (len);
 }
